@@ -25,11 +25,10 @@ const server = restify.createServer();
 server.use(restify.plugins.bodyParser());
 
 // Messages endpoint for Teams
-server.post("/api/messages", (req, res) => {
-    adapter.processActivity(req, res, async (context) => {
-        await bot.run(context);
-    });
+server.post('/api/messages', async (req, res) => {
+    await botAdapter.process(req, res);
 });
+
 
 // Start server
 const PORT = process.env.PORT || 3000;
