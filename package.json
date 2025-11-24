@@ -1,0 +1,15 @@
+{
+  "name": "nexus-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "botbuilder": "^4.19.5",
+    "restify": "^11.1.0",
+    "dotenv": "^16.4.1",
+    "openai": "^4.57.0"
+  }
+}
